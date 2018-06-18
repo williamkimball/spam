@@ -247,7 +247,12 @@ customerEmails = [];
 
 customers.customers.forEach(customer => {
     customerEmails.push(customer.contacts.email);
+
 });
 
+customerEmails = customerEmails.reduce((a, b) => a.concat(b), []);
+
+
+
 console.log(customerEmails)
-console.log(typeof customerEmails)
+
